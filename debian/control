@@ -1,0 +1,22 @@
+Source: virt-what
+Section: admin
+Priority: optional
+Maintainer: Debian Libvirt Maintainers <pkg-libvirt-maintainers@lists.alioth.debian.org>
+Uploaders: Guido Günther <agx@sigxcpu.org>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.6.0
+Vcs-Git: https://salsa.debian.org/libvirt-team/virt-what.git
+Vcs-Browser: https://salsa.debian.org/libvirt-team/virt-what
+Homepage: https://people.redhat.com/~rjones/virt-what/
+
+Package: virt-what
+Architecture: any
+Depends: dmidecode [amd64 i386 ia64 kfreebsd-amd64 kfreebsd-i386],
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: detect if we are running in a virtual machine
+ Virt-what is a shell script which can be used to detect if the program is
+ running in a virtual machine (VM).
+ .
+ The program prints out a list of "facts" about the virtual machine, derived
+ from heuristics. One fact is printed per line.
